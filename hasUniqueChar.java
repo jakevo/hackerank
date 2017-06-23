@@ -31,9 +31,13 @@ public class hasUniqueChar {
 
   public static boolean isUniqueChar(String input) {
 
+    //we asume that user input is unicode which means there are 256 characters
+    //including uppercase and lowercase
+    //if string length is more than 256 means that it s not unique
     if (input.length() > 256) {
       return false;
     }
+    
     boolean [] temp = new boolean[256];
 
     for (int i = 0; i < input.length(); i++) {
