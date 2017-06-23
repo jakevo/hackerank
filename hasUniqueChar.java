@@ -9,6 +9,10 @@
  *      java hasUniqueChar
  */
 
+ /*
+  Implement an algorithm to determine if a string has all unique characters. What if you
+  can not use additional data structures?
+  */
 import java.util.*;
 
 public class hasUniqueChar {
@@ -37,7 +41,7 @@ public class hasUniqueChar {
     if (input.length() > 256) {
       return false;
     }
-    
+
     boolean [] temp = new boolean[256];
 
     for (int i = 0; i < input.length(); i++) {
