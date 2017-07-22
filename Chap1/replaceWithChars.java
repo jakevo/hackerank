@@ -10,19 +10,21 @@ public class replaceWithChars {
     System.out.println("Enter a String: ");
     String input = reader.nextLine(); // Scans the next token of the input as
     // a String.
-
     String ret = replaceSpace(input);
 
+    String ret1 = input.replace(" ", "%20");
+
     System.out.println (ret);
+    System.out.println (ret1);
   }
+
+
 
   public static String replaceSpace(String input) {
 
     //make a char array same size with input
     char [] holder = new char[input.length()];
-
     int len = getLength(input);
-
     char [] ret = new char [len];
     int y = 0;
     for (int i = 0; i <input.length(); i++) {
@@ -34,12 +36,9 @@ public class replaceWithChars {
       } else {
         ret[y++] = input.charAt(i);
       }
-
-
     }
     return new String (ret);
   }
-
   //get the final length of the returned string after replace space with %20
   //to create a char array big enough to hold the result
   public static int getLength(String input) {
